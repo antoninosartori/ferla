@@ -21,7 +21,7 @@
    --color-logo: #232323;
 
    /* LAYOUT */
-   --max-width-container: 1440px;
+   --max-width-container: 1600px;
    --padding-x-layout: 30px;
    --padding-y-layout: 30px;
 }
@@ -36,8 +36,13 @@
 }
 
 body{
+   margin: 0 auto;
    min-height: 100dvh;
+   width: 100%;
+   max-width: var(--max-width-container);
+   background-color: var(--color-background);
    font-family: var(--font-primary);
+   overflow-x: hidden;
 }
 
 
