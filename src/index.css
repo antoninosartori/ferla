@@ -1,24 +1,27 @@
+@font-face {
+   font-family: 'Lexend'; 
+   src: url('/public/fonts/Lexend/Lexend-VariableFont_wght.ttf') format('truetype');
+}
+
 :root{
-   --font-primary: '';
+   --font-primary: 'Lexend', sans-serif;
 
-   --fs-h1: 56px;
-   --fs-h2: 48px;
-   --fs-h3: 40px;
-   --fs-h4: 32px;
-   --fs-h5: 28px;
-   --fs-h6: 26px;
-
-   --fs-body: 16px;
-   --fs-small: 14px;
-   --fs-tiny: 12px;
+   --fs-logo: 120px;
+      --fs-title: 70px;
+      --fs-headline: 32px;
+      --fs-body: 16px;
+      --fs-small: 14px;
+      --fs-tiny: 12px;
 
    /* COLORS */
-   --color-primary: #000;
-   --color-seconary: #000;
-   --color-tertiary: #000;
+   --color-primary: #DADADA;
+   --color-seconary: #333232;
+   --color-tertiary: #EEEEEE;
+   --color-background: #232323;
+   --color-logo: #232323;
 
    /* LAYOUT */
-   --max-width-container: 1440px;
+   --max-width-container: 1600px;
    --padding-x-layout: 30px;
    --padding-y-layout: 30px;
 }
@@ -33,19 +36,22 @@
 }
 
 body{
+   margin: 0 auto;
    min-height: 100dvh;
-   font-family: var(--font-pimary);
+   width: 100%;
+   max-width: var(--max-width-container);
+   background-color: var(--color-background);
+   font-family: var(--font-primary);
+   overflow-x: hidden;
 }
+
+
 
 @media (max-width: 768px) {
    :root{
-      --fs-h1: 48px;
-      --fs-h2: 40px;
-      --fs-h3: 32px;
-      --fs-h4: 28px;
-      --fs-h5: 24px;
-      --fs-h6: 22px;
-
+      --fs-logo: 80px;
+      --fs-title: 50px;
+      --fs-headline: 24px;
       --fs-body: 16px;
       --fs-small: 14px;
       --fs-tiny: 12px;
@@ -53,4 +59,5 @@ body{
       --padding-x-layout: 8%;
       --padding-y-layout: 20px;
    }
+
 }
