@@ -1,7 +1,12 @@
+import MainLayout from "./layouts/MainLayout/MainLayout"
+import Home from "./pages/Home/Home"
+
 function App() {
 
    return (
-      <div>app</div>
+      <MainLayout>
+         < Home />
+      </MainLayout>
    )
 }
 
