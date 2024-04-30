@@ -3,6 +3,8 @@
    src: url('/public/fonts/Lexend/Lexend-VariableFont_wght.ttf') format('truetype');
 }
 
+
+
 :root{
    --font-primary: 'Lexend', sans-serif;
 
@@ -18,7 +20,8 @@
    --color-seconary: #333232;
    --color-tertiary: #EEEEEE;
    --color-background: #232323;
-   --color-logo: #232323;
+   --color-logo: #DADADA;
+   --color-white: #ebebeb;
 
    /* LAYOUT */
    --max-width-container: 1600px;

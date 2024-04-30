@@ -1,0 +1,21 @@
+
+.SimpleCarousel-container{
+   height: 100%;
+   width: 100%;
+   display: flex;
+}
+
+.SimpleCarousel--image{
+   filter: grayscale(100%);
+   width: 100%;
+   height: auto;
+   max-height: 600px;
+   object-fit: cover;
+   border: 5px solid var(--color-white);
+   opacity: 1;
+   transition: opacity 0.5s ease-in-out; 
+}
+
+.SimpleCarousel--image.fade-out {
+   opacity: 0;
+}
