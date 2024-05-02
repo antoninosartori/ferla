@@ -7,23 +7,35 @@
    --font-primary: 'Lexend', sans-serif;
 
    --fs-logo: 120px;
-      --fs-title: 70px;
-      --fs-headline: 32px;
-      --fs-body: 16px;
-      --fs-small: 14px;
-      --fs-tiny: 12px;
+   --fs-title: 70px;
+   --fs-headline: 32px;
+   --fs-body: 16px;
+   --fs-small: 14px;
+   --fs-tiny: 12px;
 
    /* COLORS */
    --color-primary: #DADADA;
    --color-seconary: #333232;
+   --color-seconary-light: #333131;
+
    --color-tertiary: #EEEEEE;
    --color-background: #232323;
    --color-logo: #232323;
 
    /* LAYOUT */
    --max-width-container: 1600px;
-   --padding-x-layout: 30px;
-   --padding-y-layout: 30px;
+   --padding-x-layout: 32px;
+   --padding-y-layout: 32px;
+
+   --border-radius-md: 21px;
+   --border-radius-sm: 5px;
+
+   /* COMPONENTS */
+   --padding-x-component: 8px;
+
+   --player-track-number-height: 64px;
+   --player-track-number-width: 64px;
+
 }
 
 *{

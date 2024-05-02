@@ -1,0 +1,38 @@
+.PlayerTrack-container{
+   width: 100%;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 16px;
+   padding: var(--padding-x-component);
+   background-color: var(--color-seconary);
+   border-radius: var(--border-radius-sm);
+}
+
+.PlayerTrack--playing{
+   background-color: var(--color-primary);
+}
+
+.PlayerTrack-container.PlayerTrack--playing .PlayerTrack--trackName{
+   color: var(--color-background);
+}
+
+.PlayerTrack-trackNumber-container{
+   height: var(--player-track-number-height);
+   width: var(--player-track-number-width);
+   display: grid;
+   place-items: center;
+   background-color: var(--color-background);
+   border-radius: 50%;
+}
+
+.PlayerTrack--trackNumber{
+   color: var(--color-tertiary);
+   font-size: var(--fs-body);
+}
+
+.PlayerTrack--trackName{
+   font-weight: 300;
+   font-size: var(--fs-body);
+   color: var(--color-tertiary);
+}
