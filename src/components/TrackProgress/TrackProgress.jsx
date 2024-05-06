@@ -20,7 +20,7 @@ export default function TrackProgress() {
       setCurrentTime(audioRef.current?.currentTime)
    }
 
-   const duration = audioRef.current?.duration ?? 100
+   const duration = audioRef.current?.duration || 0
 
    return (
       <div className='TrackProgress-main-container'>
@@ -36,7 +36,7 @@ export default function TrackProgress() {
                }
             }
          />
-         <span className='TrackProgress--time'>{duration ? formateTrackTime(duration) : '--:--'}</span>
+         <span className='TrackProgress--time'>{duration ? formateTrackTime(duration) : '-:-'}</span>
       </div>
    )
 }

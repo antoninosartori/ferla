@@ -10,6 +10,7 @@ export default function Player() {
       setPlayer,
       audioRef,
       resetPlayerInitialValues,
+      setIsPlaying
    } = useContext(AppContext)
 
    useEffect(() => {
@@ -17,6 +18,10 @@ export default function Player() {
          if (event.key === 'Escape' || event.key === 'escape') {
             resetPlayerInitialValues();
          }
+         if(event.key === ' '){
+            setIsPlaying(prevState => !prevState)
+         }
+         
       };
 
       document.addEventListener('keydown', handleKeyDown);
