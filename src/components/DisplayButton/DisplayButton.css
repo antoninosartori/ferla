@@ -5,6 +5,12 @@
    gap: 8px;
 }
 
+.DisplayButton-wrapper-container{
+   display: flex;
+   gap: 8px;
+   align-items: center;
+}
+
 .DisplayButton-buttons{
    width: 100%;
    display: flex;
@@ -31,6 +37,18 @@
 
 .DisplayButton--btn:hover{
    opacity: .7;
+}
+
+.DisplayButton-volume-container{
+   display: flex;
+   gap: 8px;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+.DisplayButton-volume-iconContainer{
+   display: grid;
+   place-items: center;
 }
 
 @media (max-width: 768px) {

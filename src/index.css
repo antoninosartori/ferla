@@ -22,6 +22,8 @@
    --color-background: #232323;
    --color-logo: #232323;
 
+   --color-player-slider-track: #DAC182;
+
    /* LAYOUT */
    --max-width-container: 1600px;
    --padding-x-layout: 32px;
@@ -35,7 +37,6 @@
 
    --player-track-number-height: 64px;
    --player-track-number-width: 64px;
-
 }
 
 *{

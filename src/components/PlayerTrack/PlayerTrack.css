@@ -7,6 +7,20 @@
    padding: var(--padding-x-component);
    background-color: var(--color-seconary);
    border-radius: var(--border-radius-sm);
+   cursor: pointer;
+}
+
+.PlayerTrack-container:hover{
+   opacity: 0.9;
+}
+
+.PlayerTrack-container:hover .PlayerTrack--trackNumber{
+   display: none;
+}
+
+.PlayerTrack-container:hover .PlayerTrack--icon{
+   display: grid;
+   place-items: center;
 }
 
 .PlayerTrack--playing{
@@ -35,4 +49,9 @@
    font-weight: 300;
    font-size: var(--fs-body);
    color: var(--color-tertiary);
+}
+
+.PlayerTrack--icon{
+   display: none;
+   transform: .3s all;
 }

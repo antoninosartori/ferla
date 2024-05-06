@@ -5,12 +5,17 @@ import PlayerTrack from '../PlayerTrack/PlayerTrack'
 import DisplayButton from '../DisplayButton/DisplayButton'
 
 export default function Player() {
-   const { player, setPlayer } = useContext(AppContext)
+   const {
+      player,
+      setPlayer,
+      audioRef,
+      resetPlayerInitialValues,
+   } = useContext(AppContext)
 
    useEffect(() => {
       const handleKeyDown = (event) => {
          if (event.key === 'Escape' || event.key === 'escape') {
-            setPlayer(null);
+            resetPlayerInitialValues();
          }
       };
 
@@ -21,15 +26,15 @@ export default function Player() {
       };
    }, [setPlayer]);
 
-   if (!player) return null
 
+   if (!player) return null
    return (
       <section className='Player-main-container'>
 
-         <div onClick={() => setPlayer(null)} className='Player--overlay'></div>
+         <div onClick={() => resetPlayerInitialValues()} className='Player--overlay'></div>
          <article className='Player-content-container'>
 
-            <button onClick={() => setPlayer(null)} className='Player--closeBtn'>CERRAR</button>
+            <button onClick={() => resetPlayerInitialValues()} className='Player--closeBtn'>CERRAR</button>
 
             <div className='Player-info-wrapper'>
                <figure className='Player-info-image-container'>
@@ -44,13 +49,15 @@ export default function Player() {
             <div className='Player-tracks-container'>
                <div className='Player-tracks-wrapper'>
                   {player.tracks.map((track, idx) => (
-                     < PlayerTrack key={track.id} isPlaying={track.id === 1} trackName={track.name} trackNumber={idx + 1} />
+                     < PlayerTrack key={track.id} sound={track.sound} trackId={track.id} trackName={track.name} trackNumber={idx + 1} />
                   ))}
                </div>
 
                < DisplayButton />
             </div>
          </article>
+
+         <audio ref={audioRef}></audio>
       </section>
    )
 }

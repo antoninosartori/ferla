@@ -1,17 +1,34 @@
-import { useState } from "react";
+import {  useRef, useState } from "react";
 import { createContext } from "react";
 
 const AppContext = createContext()
 
-const AppProvider = ({children}) => {
-
+const AppProvider = ({ children }) => {
+   const [isPlaying, setIsPlaying] = useState(false)
+   const [currentSong, setCurrentSong] = useState(null)
    const [player, setPlayer] = useState(null)
+   const audioRef = useRef()
+   const volumeRef = useRef(1)
 
+   const resetPlayerInitialValues = () => {
+      setIsPlaying(false)
+      setCurrentSong(null)
+      setPlayer(null)
+      audioRef.current = null
+   }
 
-   return(
-      <AppContext.Provider 
+   return (
+      <AppContext.Provider
          value={{
-            player, setPlayer
+            player, 
+            setPlayer,
+            isPlaying, 
+            setIsPlaying,
+            currentSong, 
+            setCurrentSong,
+            audioRef, 
+            volumeRef,
+            resetPlayerInitialValues,
          }}
       >
          {children}
@@ -19,4 +36,4 @@ const AppProvider = ({children}) => {
    )
 }
 
-export {AppContext, AppProvider}
+export { AppContext, AppProvider }
