@@ -31,8 +31,8 @@ export default function Player() {
       };
    }, [setPlayer]);
 
-
    if (!player) return null
+
    return (
       <section className='Player-main-container'>
 
