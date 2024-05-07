@@ -3,10 +3,10 @@
 // Importa las imágenes
 //import {ferla, ferla2, ferla3, ferla4, ferla5} from '../assets/hero';
 import ferla1 from '../assets/hero/ferla1.png'
-import ferla2 from '../assets/hero/ferla2.png'
-import ferla3 from '../assets/hero/ferla3.png'
-import ferla4 from '../assets/hero/ferla4.png'
-import ferla5 from '../assets/hero/ferla5.png'
+import ferla2 from '../assets/hero/ferla02.webp'
+import ferla3 from '../assets/hero/ferla03.webp'
+import ferla4 from '../assets/hero/ferla04.webp'
+import ferla5 from '../assets/hero/ferla05.webp'
 
 
 // Define un array con la información de las imágenes
