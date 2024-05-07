@@ -1,0 +1,12 @@
+.slider {
+	height: 100%;
+	min-height: 100vh;
+	color: white;
+}
+
+.slide-img {
+	width: 250px;
+	height: 350px;
+	background-repeat: no-repeat;
+	object-fit: cover;
+}
