@@ -31,8 +31,6 @@ export default function DisplayButton() {
    const currentTrackIndex = tracks?.findIndex(track => track.id === currentSong?.id)
    const albumLength = tracks?.length - 1
 
-
-
    useEffect(() => {
       isPlaying
          ? audioRef.current.play()
@@ -50,6 +48,8 @@ export default function DisplayButton() {
       audioRef.current.play()
       setIsPlaying(true)
    }, [])
+
+   
 
    const handleNextTrack = () => {
       if (albumLength === currentTrackIndex) return null
@@ -123,7 +123,7 @@ export default function DisplayButton() {
             </div>
          </div>
 
-         < TrackProgress />
+         < TrackProgress handleNextTrack={handleNextTrack} />
 
       </div>
    )

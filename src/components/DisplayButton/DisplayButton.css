@@ -52,10 +52,14 @@
 }
 
 @media (max-width: 768px) {
-   /* .DisplayButton-main-container{
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      z-index: 10;
-   } */
+   .DisplayButton-main-container{
+      padding: 10px 0;
+      width: 100%;
+   }
+}
+
+@media (max-width: 576px) {
+   .DisplayButton-volume-container{
+      gap: 0;
+   }
 }
