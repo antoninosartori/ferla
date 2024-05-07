@@ -4,9 +4,14 @@
 	color: white;
 }
 
+.swiper-slide {
+	width: 264px;
+	height: 324px;
+}
+
 .slide-img {
-	width: 250px;
-	height: 350px;
+	width: 260px;
+	height: 327px;
 	background-repeat: no-repeat;
 	object-fit: cover;
 }

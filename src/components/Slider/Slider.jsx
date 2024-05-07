@@ -7,7 +7,7 @@ export default function Slider({ slides }) {
 	return (
 		<>
 			<Swiper
-				spaceBetween={30}
+				spaceBetween={20}
 				slidesPerView={4.5}
 				onSlideChange={() => console.log('slide change')}
 				onSwiper={(swiper) => console.log(swiper)}
