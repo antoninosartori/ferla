@@ -25,33 +25,12 @@ export default function DisplayButton() {
    } = useContext(AppContext)
 
    const [volume, setVolume] = useState(50)
+   const [prevVolume, setPrevVolume] = useState(50)
 
    const tracks = player?.tracks
    const currentTrackIndex = tracks?.findIndex(track => track.id === currentSong?.id)
    const albumLength = tracks?.length - 1
-   
-   const handleNextTrack = () => {
-      if(albumLength === currentTrackIndex) return null
-      const nextTrack = tracks[currentTrackIndex + 1]
-      audioRef.current.src = nextTrack.sound
-      audioRef.current.play()
-      setCurrentSong({
-         id: nextTrack.id,
-         sound: nextTrack.sound
-      })
-   } 
 
-   const handlePrevTrack = () => {
-      if(currentTrackIndex === 0) return null
-      const prevTrack = tracks[currentTrackIndex - 1]
-      audioRef.current.src = prevTrack.sound
-      audioRef.current.play()
-      setCurrentSong({
-         id: prevTrack.id,
-         sound: prevTrack.sound
-      })
-   } 
-   
 
 
    useEffect(() => {
@@ -72,6 +51,40 @@ export default function DisplayButton() {
       setIsPlaying(true)
    }, [])
 
+   const handleNextTrack = () => {
+      if (albumLength === currentTrackIndex) return null
+      const nextTrack = tracks[currentTrackIndex + 1]
+      audioRef.current.src = nextTrack.sound
+      audioRef.current.play()
+      setCurrentSong({
+         id: nextTrack.id,
+         sound: nextTrack.sound
+      })
+   }
+
+   const handlePrevTrack = () => {
+      if (currentTrackIndex === 0) return null
+      const prevTrack = tracks[currentTrackIndex - 1]
+      audioRef.current.src = prevTrack.sound
+      audioRef.current.play()
+      setCurrentSong({
+         id: prevTrack.id,
+         sound: prevTrack.sound
+      })
+   }
+
+   const toggleSoundVolume = () => {
+      if (volume > 0) {
+         setPrevVolume(volume)
+         setVolume(0)
+         volumeRef.current = 0
+         audioRef.current.volume = 0
+         return
+      }
+      setVolume(prevVolume)
+      volumeRef.current = prevVolume / 100
+      audioRef.current.volume = prevVolume / 100
+   }
 
    return (
       <div className='DisplayButton-main-container'>
@@ -92,7 +105,7 @@ export default function DisplayButton() {
                </button>
             </div>
             <div className='DisplayButton-volume-container'>
-               <div className='DisplayButton-volume-iconContainer'>
+               <div className='DisplayButton-volume-iconContainer' onClick={toggleSoundVolume}>
                   {volume < 1 && < IconMute />}
                   {volume > 0 && volume <= 55 && < IconMidSound />}
                   {volume > 55 && < IconMaxSound />}
