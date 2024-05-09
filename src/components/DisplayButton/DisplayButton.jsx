@@ -12,6 +12,7 @@ import TrackProgress from '../TrackProgress/TrackProgress'
 import IconMute from '../../assets/icons/IconMute'
 import IconMidSound from '../../assets/icons/IconMidSound'
 import IconMaxSound from '../../assets/icons/IconMaxSound'
+import Loader from '../Loader/Loader'
 
 export default function DisplayButton() {
    const {
@@ -49,7 +50,7 @@ export default function DisplayButton() {
       setIsPlaying(true)
    }, [])
 
-   
+
 
    const handleNextTrack = () => {
       if (albumLength === currentTrackIndex) return null
@@ -86,6 +87,8 @@ export default function DisplayButton() {
       audioRef.current.volume = prevVolume / 100
    }
 
+   const isLoading = isPlaying && !audioRef?.current?.src
+
    return (
       <div className='DisplayButton-main-container'>
 
@@ -95,9 +98,9 @@ export default function DisplayButton() {
                   < IconPrev />
                </button>
                <button className='DisplayButton--btn DisplayButton--play-pause' onClick={() => setIsPlaying(!isPlaying)} >
-                  {isPlaying
-                     ? < IconPause />
-                     : < IconPlay color='var(--color-tertiary)' />
+                  {isPlaying && !isLoading && < IconPause />}
+                  {!isPlaying && !isLoading && < IconPlay color='var(--color-tertiary)' />}
+                  {isLoading && < Loader />
                   }
                </button>
                <button className='DisplayButton--btn' onClick={handleNextTrack}>
