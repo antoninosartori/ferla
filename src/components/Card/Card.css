@@ -1,32 +1,36 @@
-.card {
-	background-image: url('https://images.pexels.com/photos/62623/wing-plane-flying-airplane-62623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+.Card-main-container {
 	background-position: center;
 	background-repeat: no-repeat;
-
-	max-width: 655px;
+   background-size: cover;
+	/* max-width: 655px; */
 	width: 100%;
 	height: 422px;
 	display: flex;
 	flex-direction: column;
 	justify-content: end;
 	align-items: stretch;
+   cursor: pointer;
 }
 
-.cardTitle {
+.Card-main-container:hover{
+   opacity: .7;
+}
+
+.Card-title-container {
 	height: 72px;
-	top: 350px;
+	/* top: 350px; */
 	gap: 10px;
 	background: linear-gradient(83.18deg, rgba(0, 0, 0, 0.6) 5.34%, rgba(102, 102, 102, 0) 109.75%);
 
 }
 
-.cardTitle h2 {
+.Card-title-container h3 {
 	margin: 0;
-	width: 507px;
+	width: 100%;
 	height: 40px;
 	font-family: Lexend;
 	font-weight: 400;
-	font-size: 32px;
+	font-size: var(--fs-headline);
 	line-height: 40px;
 	text-align: left;
 	padding: 16px;

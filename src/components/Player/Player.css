@@ -6,6 +6,7 @@
    width: 100vw;
    display: grid;
    place-items: center;
+   z-index: 10000;
 }
 
 .Player--overlay{

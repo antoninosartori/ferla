@@ -1,11 +1,20 @@
 import './Card.css'
 
-export function Card() {
-	return (
-		<div className="card">
-			<div className="cardTitle">
-				<h2>SARKANY COMPANY</h2>
-			</div>
-		</div>
-	)
+export function Card({ title, image, ...others }) {
+
+   const styles = {
+      backgroundImage: `url(${image})`
+   }
+
+   return (
+      <article
+         style={styles}
+         className="Card-main-container"
+         {...others}
+      >
+         <div className="Card-title-container">
+            <h3>{title}</h3>
+         </div>
+      </article>
+   )
 }

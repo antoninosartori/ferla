@@ -18,10 +18,10 @@ export default function Player() {
          if (event.key === 'Escape' || event.key === 'escape') {
             resetPlayerInitialValues();
          }
-         if(event.key === ' '){
+         if (event.key === ' ') {
             setIsPlaying(prevState => !prevState)
          }
-         
+
       };
 
       document.addEventListener('keydown', handleKeyDown);
@@ -37,6 +37,7 @@ export default function Player() {
       <section className='Player-main-container'>
 
          <div onClick={() => resetPlayerInitialValues()} className='Player--overlay'></div>
+
          <article className='Player-content-container'>
 
             <button onClick={() => resetPlayerInitialValues()} className='Player--closeBtn'>CERRAR</button>
@@ -50,16 +51,17 @@ export default function Player() {
                   <p className='Player-info-project--description'>{player.description}</p>
                </div>
             </div>
+         {console.log(player?.tracks?.length)}
+            {(player?.tracks?.length > 0 && player?.tracks?.length !== undefined) &&
+               <div className='Player-tracks-container'>
+                  <div className='Player-tracks-wrapper'>
+                     {player?.tracks?.map((track, idx) => (
+                        < PlayerTrack key={track.id} sound={track.sound} trackId={track.id} trackName={track.name} trackNumber={idx + 1} />
+                     ))}
+                  </div>
 
-            <div className='Player-tracks-container'>
-               <div className='Player-tracks-wrapper'>
-                  {player.tracks.map((track, idx) => (
-                     < PlayerTrack key={track.id} sound={track.sound} trackId={track.id} trackName={track.name} trackNumber={idx + 1} />
-                  ))}
-               </div>
-
-               < DisplayButton />
-            </div>
+                  < DisplayButton />
+               </div>}
          </article>
 
          <audio ref={audioRef}></audio>
