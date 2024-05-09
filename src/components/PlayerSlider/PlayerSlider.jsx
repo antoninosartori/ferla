@@ -1,6 +1,6 @@
-import './Slider.css'
+import './PlayerSlider.css'
 
-export default function Slider({
+export default function PlayerSlider({
    value,
    width = '100%',
    min = 0,
@@ -15,18 +15,18 @@ export default function Slider({
    }
 
    return (
-      <div className='Slider-main-container'>
-         <div className='Slider-wrapper-container' style={styles.wrapper}>
+      <div className='PlayerSlider-main-container'>
+         <div className='PlayerSlider-wrapper-container' style={styles.wrapper}>
             <input
                {...others}
                type="range"
                min={min}
                max={max}
                value={value}
-               className='Slider--rangeInput'
+               className='PlayerSlider--rangeInput'
             />
             <progress
-               className='Slider--progress'
+               className='PlayerSlider--progress'
                min={min}
                max={max}
                value={value}

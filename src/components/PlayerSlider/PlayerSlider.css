@@ -1,16 +1,16 @@
-.Slider-main-container{
+.PlayerSlider-main-container{
    display: grid;
    place-items: center;
    padding: 8px;
    width: 100%;
 }
 
-.Slider-wrapper-container{
+.PlayerSlider-wrapper-container{
    position: relative;
    height: 5px;
 }
 
-.Slider--rangeInput{
+.PlayerSlider--rangeInput{
    position: absolute;
    left: -6px;
    top: 0;
@@ -22,7 +22,7 @@
    z-index: 10;
 }
 
-.Slider--rangeInput::-webkit-slider-thumb{
+.PlayerSlider--rangeInput::-webkit-slider-thumb{
    -webkit-appearance: none;
    appearance: none;
    width: 12px;
@@ -32,7 +32,7 @@
    cursor: pointer;
 }
 
-.Slider--progress{
+.PlayerSlider--progress{
    height: 100%;
    width: 100%;
    -webkit-appearance: none;
@@ -44,11 +44,11 @@
    overflow: hidden;
 }
 
-.Slider--progress::-webkit-progress-bar{
+.PlayerSlider--progress::-webkit-progress-bar{
    background-color: var(--color-seconary-light);
 }
 
-.Slider--progress::-webkit-progress-value{
+.PlayerSlider--progress::-webkit-progress-value{
    background-color: var(--color-player-slider-track);
 }
 

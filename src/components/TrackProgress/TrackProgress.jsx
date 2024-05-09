@@ -1,6 +1,6 @@
 import './TrackProgress.css'
 import { useContext, useEffect, useState } from 'react'
-import Slider from '../Slider/Slider'
+import PlayerSlider from '../PlayerSlider/PlayerSlider'
 import { AppContext } from '../../contexts/AppContext/AppContext'
 import { formateTrackTime } from '../../utils/formateTrackTime'
 
@@ -29,7 +29,7 @@ export default function TrackProgress({handleNextTrack}) {
    return (
       <div className='TrackProgress-main-container'>
          <span className='TrackProgress--time'>{formateTrackTime(currentTime)}</span>
-         < Slider
+         < PlayerSlider
             value={currentTime}
             min={0}
             max={duration}

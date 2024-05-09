@@ -3,7 +3,7 @@ import './DisplayButton.css'
 import { useContext, useEffect, useState } from 'react'
 import { AppContext } from '../../contexts/AppContext/AppContext'
 
-import Slider from '../Slider/Slider'
+import PlayerSlider from '../PlayerSlider/PlayerSlider'
 import IconPlay from '../../assets/icons/IconPlay'
 import IconPause from '../../assets/icons/IconPause'
 import IconPrev from '../../assets/icons/IconPrev'
@@ -110,7 +110,7 @@ export default function DisplayButton() {
                   {volume > 0 && volume <= 55 && < IconMidSound />}
                   {volume > 55 && < IconMaxSound />}
                </div>
-               < Slider
+               < PlayerSlider
                   width={`40px`}
                   value={volume}
                   onChange={({ target }) => {
