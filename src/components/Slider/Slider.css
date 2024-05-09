@@ -1,0 +1,17 @@
+.slider {
+	height: 100%;
+	min-height: 100vh;
+	color: white;
+}
+
+.swiper-slide {
+	width: 264px;
+	height: 324px;
+}
+
+.slide-img {
+	width: 260px;
+	height: 327px;
+	background-repeat: no-repeat;
+	object-fit: cover;
+}
