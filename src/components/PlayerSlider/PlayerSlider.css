@@ -1,0 +1,54 @@
+.PlayerSlider-main-container{
+   display: grid;
+   place-items: center;
+   padding: 8px;
+   width: 100%;
+}
+
+.PlayerSlider-wrapper-container{
+   position: relative;
+   height: 5px;
+}
+
+.PlayerSlider--rangeInput{
+   position: absolute;
+   left: -6px;
+   top: 0;
+   height: 100%;
+   width: calc(100% + 12px);
+   -webkit-appearance: none;
+   appearance: none;
+   background-color: transparent;
+   z-index: 10;
+}
+
+.PlayerSlider--rangeInput::-webkit-slider-thumb{
+   -webkit-appearance: none;
+   appearance: none;
+   width: 12px;
+   height: 12px;
+   background-color: var(--color-player-slider-track);
+   border-radius: 50%;
+   cursor: pointer;
+}
+
+.PlayerSlider--progress{
+   height: 100%;
+   width: 100%;
+   -webkit-appearance: none;
+   appearance: none;
+   position: absolute;
+   top: 0;
+   left: 0;
+   border-radius: 10px;
+   overflow: hidden;
+}
+
+.PlayerSlider--progress::-webkit-progress-bar{
+   background-color: var(--color-seconary-light);
+}
+
+.PlayerSlider--progress::-webkit-progress-value{
+   background-color: var(--color-player-slider-track);
+}
+
