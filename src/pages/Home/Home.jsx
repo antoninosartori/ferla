@@ -2,6 +2,7 @@ import './Home.css'
 import Hero from '../../sections/Hero/Hero'
 import Projects from '../Projects/Projects'
 import { useState } from 'react'
+import SecondHero from '../../features/SecondHero/SecondHero'
 export default function Home() {
    const [isSliderHero, setIsSliderHero] = useState(true)
 
@@ -18,10 +19,10 @@ export default function Home() {
             borderRadius: '5px',
             fontWeight: 'bold',
             fontFamily: 'var(--font-primary)',
-            color: 'var(--color-logo)',
+            color: 'var(--color-background)',
             cursor: 'pointer'
             }} onClick={() => setIsSliderHero(!isSliderHero)}>Cambiar HERO</button>
-			{isSliderHero ? < Hero /> : <></>}
+			{isSliderHero ? < Hero /> : < SecondHero/>}
 			< Projects />
 			{/* < Bio /> */}
 			{/* < Fotter /> */}

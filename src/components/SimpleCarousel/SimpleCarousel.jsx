@@ -1,5 +1,5 @@
 import './SimpleCarousel.css'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function SimpleCarousel({ 
    slides, 
@@ -27,7 +27,7 @@ export default function SimpleCarousel({
       <div className='SimpleCarousel-container'>
          <img
             className={`SimpleCarousel--image ${fadeOut ? 'fade-out' : ''}`}
-            src={slides[slideIndex]}
+            src={slides[slideIndex].src}
             alt="Imagen del carrusel"
          />
       </div>

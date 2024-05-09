@@ -1,7 +1,7 @@
 import './SecondHero.css'
 import ferlaImgs from '../../assets/hero/hero_img_group.png'
-import { HERO_IMAGES } from '../../utils/hero-images'
-import SimpleCarousel from '../../components/SimpleCarousel/SimpleCarousel';
+// import SimpleCarousel from '../../components/SimpleCarousel/SimpleCarousel';
+// import { slides } from '../../utils/imageData';
 
 export default function SecondHero() {
 
@@ -14,7 +14,7 @@ export default function SecondHero() {
                <img className='SecondHero--image' src={ferlaImgs} alt="imagenes de ferla" />
             </figure>
             
-            < SimpleCarousel slides={HERO_IMAGES} />
+            {/* < SimpleCarousel slides={slides} /> */}
             
          </section>
       </section>
