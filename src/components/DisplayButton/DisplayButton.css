@@ -1,0 +1,65 @@
+.DisplayButton-main-container{
+   padding: 16px;
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+
+.DisplayButton-wrapper-container{
+   display: flex;
+   gap: 8px;
+   align-items: center;
+}
+
+.DisplayButton-buttons{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 8px;
+}
+
+.DisplayButton--btn{
+   display: grid;
+   place-items: center;
+   background-color: transparent;
+   outline: none;
+   border: none;
+   cursor: pointer;
+   height: var(--player-track-number-height);
+   width: var(--player-track-number-width);
+   border-radius: 50%;
+}
+
+.DisplayButton--play-pause{
+   background-color: var(--color-seconary-light);
+}
+
+.DisplayButton--btn:hover{
+   opacity: .7;
+}
+
+.DisplayButton-volume-container{
+   display: flex;
+   gap: 8px;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+.DisplayButton-volume-iconContainer{
+   display: grid;
+   place-items: center;
+}
+
+@media (max-width: 768px) {
+   .DisplayButton-main-container{
+      padding: 10px 0;
+      width: 100%;
+   }
+}
+
+@media (max-width: 576px) {
+   .DisplayButton-volume-container{
+      gap: 0;
+   }
+}

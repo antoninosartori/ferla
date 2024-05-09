@@ -1,0 +1,28 @@
+.hero-container {
+	background-image: url('../../assets/hero/ferla-landscape.webp');
+	background-repeat: no-repeat;
+	height: 100%;
+	min-height: 100vh;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+
+.hero-title {
+	width: 348px;
+	height: 150px;
+	margin-top: 18px;
+	margin-left: 74px;
+}
+
+.hero-title h1 {
+	font-size: var(--fs-logo);
+	font-weight: 100;
+	line-height: 150px;
+}
+
+.hero-slider {
+	height: 100%;
+}

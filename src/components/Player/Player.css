@@ -1,0 +1,143 @@
+.Player-main-container {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100dvh;
+   width: 100vw;
+   display: grid;
+   place-items: center;
+}
+
+.Player--overlay{
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.164);
+   filter: blur(100%);
+}
+
+.Player--closeBtn{
+   position: fixed;
+   bottom: 8px;
+   right: 8px;
+   background-color: var(--color-seconary-light);
+   color: var(--color-primary);
+   padding: 8px;
+   border-radius: var(--border-radius-md);
+   border: none;
+   outline: none;
+   font-size: var(--fs-tiny);
+   font-weight: 100;
+   cursor: pointer;
+}
+
+.Player--closeBtn:hover{
+   opacity: .7;
+}
+
+.Player-content-container{
+   position: relative;
+   width: 100%;
+   max-width: 768px;
+   max-height: 90dvh;
+   display: flex;
+   justify-content: flex-start;
+   gap: var(--padding-x-layout);
+   padding: var(--padding-x-layout);
+   border-radius: var(--border-radius-md);
+   background-color: var(--color-background);
+   filter: blur(0px);
+   overflow-y: auto;
+}
+
+.Player-info-wrapper{
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+   max-width: 40%;
+}
+
+.Player-info-image-container{
+   width: 100%;
+   border-radius: var(--border-radius-sm);
+}
+
+.Player-project--image{
+   width: 100%;
+   height: auto;
+   max-height: 50dvh;
+   object-fit: cover;
+   border-radius: var(--border-radius-sm);
+}
+
+.Player-info-project-container{
+   display: flex;
+   flex-direction: column;
+   gap: 26px;
+   overflow-y: auto;
+}
+
+.Player-info-project--title{
+   font-size: var(--fs-headline);
+   color: var(--color-primary);
+   font-weight: 400;
+}
+
+.Player-info-project--description{
+   font-size: var(--fs-body);
+   color: var(--color-tertiary);
+   font-weight: 300;
+}
+
+.Player-tracks-container{
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+}
+
+.Player-tracks-wrapper{
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+   flex-grow: 1;
+   overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+   .Player-content-container{
+      flex-direction: column;
+      max-height: 100dvh;
+      gap: 16px;
+   }
+   .Player--closeBtn{
+      bottom: unset;
+      top: 8px;
+   }
+
+   .Player-info-wrapper{
+      flex-direction: row;
+      gap: 8px;
+      max-width: 100%;
+   }
+
+   .Player-info-image-container{
+      width: 40%;
+   }
+
+   .Player-info-project-container{
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+   }
+}
+
+@media (max-width: 576px) {
+   .Player-info-wrapper{
+      flex-direction: column;
+   }
+   .Player-info-image-container{
+      width: 100%;
+   }
+}
