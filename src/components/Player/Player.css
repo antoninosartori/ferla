@@ -109,7 +109,7 @@
 @media (max-width: 768px) {
    .Player-content-container{
       flex-direction: column;
-      max-height: 100dvh;
+      min-height: 100dvh;
       gap: 16px;
    }
    .Player--closeBtn{
