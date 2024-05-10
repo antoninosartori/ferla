@@ -25,8 +25,8 @@ export default function DisplayButton() {
       player,
    } = useContext(AppContext)
 
-   const [volume, setVolume] = useState(50)
-   const [prevVolume, setPrevVolume] = useState(50)
+   const [volume, setVolume] = useState(100)
+   const [prevVolume, setPrevVolume] = useState(100)
 
    const tracks = player?.tracks
    const currentTrackIndex = tracks?.findIndex(track => track.id === currentSong?.id)

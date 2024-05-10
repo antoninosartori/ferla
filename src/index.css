@@ -62,6 +62,9 @@ body {
 	overflow-x: hidden;
 }
 
+.body--no-scroll{
+   overflow: hidden;
+}
 
 @media (max-width: 768px) {
 	:root {
