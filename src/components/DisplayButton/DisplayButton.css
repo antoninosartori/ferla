@@ -49,6 +49,11 @@
 .DisplayButton-volume-iconContainer{
    display: grid;
    place-items: center;
+   cursor: pointer;
+}
+
+.DisplayButton-volume-iconContainer:hover > svg{
+   opacity: .7;
 }
 
 @media (max-width: 768px) {
