@@ -2,7 +2,8 @@ import './Home.css'
 import Hero from '../../sections/Hero/Hero'
 import { useState } from 'react'
 import SecondHero from '../../sections/SecondHero/SecondHero'
-import Projects from '../../sections/projects/Projects'
+import Projects from '../../sections/Projects/Projects'
+
 export default function Home() {
    const [isSliderHero, setIsSliderHero] = useState(true)
 
