@@ -1,0 +1,21 @@
+.FloatingBanner-main-container{
+   width: 100%;
+   max-width: var(--max-width-content);
+   background-color: var(--color-seoncary-dark);
+   display: flex;
+   align-items: center;
+   gap: var(--gap-sm);
+   padding: var(--gap-sm) var(--gap-md);
+   border-radius: var(--border-radius-sm);
+
+}
+
+.FloatingBanner-text-container{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   font-size: var(--fs-small);
+   justify-content: center;
+   flex-grow: 1;
+   color: var(--color-tertiary);
+}

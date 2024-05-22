@@ -1,6 +1,7 @@
 import './Hero.css'
 import bgImage from '../../assets/hero/hero-bg.jpg'
 import logo from '../../assets/logo/logo.png'
+import FloatingBanner from '../../components/FloatingBanner/FloatingBanner'
 
 
 const BIO_INFORMATION = [
@@ -25,7 +26,9 @@ export default function Hero() {
                   <img className='Hero-logo--image' src={logo} alt="" />
                </figure>
             </article>
+
          </div>
+         < FloatingBanner />
       </section>
    )
 }
