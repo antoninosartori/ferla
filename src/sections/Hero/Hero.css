@@ -1,44 +1,87 @@
-.hero-container {
-   background-image: url('../../assets/hero/ferla-landscape.webp');
-   background-repeat: no-repeat;
+.Hero-main-container {
+   width: 100%;
+   min-height: 100dvh;
+   display: grid;
+   place-items: center;
+   position: relative;
+}
+
+.Hero-bg--image {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
    height: 100%;
-   min-height: 100vh;
-   background-size: cover;
+   object-fit: cover;
+   filter: brightness(20%);
+   z-index: -1;
+}
+
+
+.Hero-wrapper-container {
+   width: 100%;
+   max-width: var(--max-width-content);
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: var(--gap-md);
+   justify-content: center;
+   align-items: flex-start;
+}
+
+.Hero-logo-container{
+   width: 100%;
+   max-width: 450px;
+   display: grid;
+   place-items: center;
+}
+
+.Hero-logo--image{
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+}
+
+.logo--mobile{
+   display: none;
+}
+
+.Hero-information-container{
+   width: 100%;
+   max-width: 450px;
    display: flex;
    flex-direction: column;
-   justify-content: space-between;
+   gap: var(--gap-md);
 }
 
-
-.hero-title {
-   width: 348px;
-   height: 150px;
-   margin-top: 18px;
-   margin-left: 74px;
-}
-
-.hero-title h1 {
-   font-size: var(--fs-logo);
-   font-weight: 100;
-   line-height: 150px;
-}
-
-.hero-slider {
-   height: 100%;
+.Hero-information--text{
+   font-size: var(--fs-body);
+   color: var(--color-primary);
 }
 
 @media (max-width: 768px) {
+   .Hero-main-container {
+      padding: var(--padding-x-layout);
+   }  
+   .Hero-wrapper-container{
+      grid-template-columns: 1fr;
+      justify-content: center;
+   }
+   .logo--desktop{
+      display: none;
+   }
+   .Hero-information--text:nth-child(1){
+      order: 1;
+   }
+   .Hero-information--text:nth-child(2){
+      order: 3;
+   }
+   .Hero-information--text:nth-child(3){
+      order: 4;
+   }
 
-   .hero-title {
-      width:100%;
-      height: unset;
-      margin-top: unset;
-      margin-left: unset;
+   .logo--mobile{
       display: grid;
-      place-items: center;
+      order: 2;
    }
 
-   .hero-title h1 {
-      width: unset;
-   }
 }
