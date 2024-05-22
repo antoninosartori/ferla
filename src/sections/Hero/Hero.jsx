@@ -11,6 +11,8 @@ const BIO_INFORMATION = [
 ]
 
 export default function Hero() {
+
+
    return (
       <section className='Hero-main-container'>
          <img className='Hero-bg--image' src={bgImage} alt="background imagen" />
