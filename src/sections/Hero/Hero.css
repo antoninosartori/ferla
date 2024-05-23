@@ -60,21 +60,26 @@
 
 @media (max-width: 768px) {
    .Hero-main-container {
-      padding: var(--padding-x-layout);
+      padding: 100px var(--padding-x-layout) var(--padding-x-layout) var(--padding-x-layout);
    }  
+
    .Hero-wrapper-container{
       grid-template-columns: 1fr;
       justify-content: center;
    }
+
    .logo--desktop{
       display: none;
    }
+
    .Hero-information--text:nth-child(1){
       order: 1;
    }
+
    .Hero-information--text:nth-child(2){
       order: 3;
    }
+   
    .Hero-information--text:nth-child(3){
       order: 4;
    }

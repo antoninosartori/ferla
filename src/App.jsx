@@ -7,8 +7,6 @@ import { AppContext } from "./contexts/AppContext/AppContext"
 function App() {
    const { player } = useContext(AppContext)
 
-  
-
    return (
       <MainLayout>
          < Home />

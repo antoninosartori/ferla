@@ -4,9 +4,10 @@ import './Navbar.css';
 import { IconHamburger } from '../../assets/icons/IconHamburger.jsx';
 import { IconX } from '../../assets/icons/IconX.jsx';
 import { AppContext } from '../../contexts/AppContext/AppContext.jsx';
+import logo from '../../assets/logo/logo.png'
 
 export function Navbar() {
-   const {isOpen, setIsOpen} = useContext(AppContext)
+   const { isOpen, setIsOpen } = useContext(AppContext)
 
    const toggleMenu = () => {
       setIsOpen(!isOpen);
@@ -16,7 +17,7 @@ export function Navbar() {
       <header className='header-main-container'>
          <nav className='header-wrapper-container'>
             <div className="container-navbar">
-               <button className="btn-abrir" onClick={toggleMenu}>
+               <button className="btn-toggle" onClick={toggleMenu}>
                   {isOpen ? (
                      <IconX />
                   ) : (
@@ -24,9 +25,9 @@ export function Navbar() {
                   )}
                </button>
                <div className={`navbar-data ${isOpen ? 'show expand' : ''}`}>
-                  <div className="navbar-icon">
-                     <h3>FERLA</h3>
-                  </div>
+                  <figure className="navbar-logo-container">
+                     <img className='navbar-logo-image' src={logo} alt="FERLA" />
+                  </figure>
                   <ul className={`navbar-navlist`} >
                      <li className="nav-item">
                         <a onClick={() => setIsOpen(false)} className="nav-link" href="#produccion"><span>Producción musical</span></a>
