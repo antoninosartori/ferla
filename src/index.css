@@ -3,8 +3,6 @@
    src: url('/public/fonts/Lexend/Lexend-VariableFont_wght.ttf') format('truetype');
 }
 
-
-
 :root {
    --font-primary: 'Lexend', sans-serif;
 
@@ -84,6 +82,7 @@ body {
       --fs-body: 16px;
       --fs-small: 14px;
       --fs-tiny: 12px;
+      
 
       --padding-x-layout: 5%;
       --padding-y-layout: 20px;

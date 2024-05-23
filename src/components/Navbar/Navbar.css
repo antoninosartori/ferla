@@ -6,6 +6,7 @@
    width: 100dvw;
    display: grid;
    place-items: center;
+   z-index: 100;
 }
 
 .header-wrapper-container {
