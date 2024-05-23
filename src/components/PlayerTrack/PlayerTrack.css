@@ -3,7 +3,7 @@
    display: flex;
    justify-content: flex-start;
    align-items: center;
-   gap: 16px;
+   gap: var(--gap-sm);
    padding: var(--padding-x-component);
    background-color: var(--color-seconary);
    border-radius: var(--border-radius-sm);

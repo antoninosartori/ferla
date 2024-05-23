@@ -12,8 +12,6 @@ export function Navbar() {
       setIsOpen(!isOpen);
    };
 
-   
-
    return (
       <header className='header-main-container'>
          <nav className='header-wrapper-container'>
