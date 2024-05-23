@@ -8,6 +8,11 @@ import lastImg from '../../assets/images/lastofus01.webp'
 const AppContext = createContext()
 
 const AppProvider = ({ children }) => {
+
+   /* NAVBAR */
+   const [isOpen, setIsOpen] = useState(false);
+
+   /* PLAYER */
    const [isPlaying, setIsPlaying] = useState(false)
    const [currentSong, setCurrentSong] = useState(null)
    const [player, setPlayer] = useState(null)
@@ -24,6 +29,8 @@ const AppProvider = ({ children }) => {
    return (
       <AppContext.Provider
          value={{
+            isOpen, 
+            setIsOpen,
             player,
             setPlayer,
             isPlaying,
