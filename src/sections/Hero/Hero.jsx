@@ -12,25 +12,28 @@ const BIO_INFORMATION = [
 
 export default function Hero() {
 
-
    return (
       <section className='Hero-main-container'>
          <img className='Hero-bg--image' src={bgImage} alt="background imagen" />
          <div className='Hero-wrapper-container'>
-            <figure className='Hero-logo-container logo--desktop'>
-               <img className='Hero-logo--image' src={logo} alt="" />
-            </figure>
-            <article className='Hero-information-container'>
-               {BIO_INFORMATION.map(item => (
-                  <p className='Hero-information--text' key={item}>{item}</p>
-               ))}
-               <figure className='Hero-logo-container logo--mobile'>
-                  <img className='Hero-logo--image' src={logo} alt="" />
+            
+            <div className='Hero-content-container'>
+               <figure className='Hero-logo-container logo--desktop'>
+                  <img className='Hero-logo--image' src={logo} alt="FERLA" />
                </figure>
-            </article>
+               <article className='Hero-information-container'>
+                  {BIO_INFORMATION.map(item => (
+                     <p className='Hero-information--text' key={item}>{item}</p>
+                  ))}
+                  <figure className='Hero-logo-container logo--mobile'>
+                     <img className='Hero-logo--image' src={logo} alt="" />
+                  </figure>
+               </article>
+            </div>
 
+            < FloatingBanner />
          </div>
-         < FloatingBanner />
+         
       </section>
    )
 }
