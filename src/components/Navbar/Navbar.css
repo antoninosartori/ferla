@@ -42,6 +42,7 @@
 .nav-link {
    color: var(--color-primary);
    font-size: var(--fs-medium);
+   font-weight: 300;
    transition: all 0.3s;
 }
 
