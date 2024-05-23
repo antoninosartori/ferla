@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createContext } from "react";
 import sound1 from '../../assets/sounds/last-of-us/I.mp3'
 import sound2 from '../../assets/sounds/last-of-us/II.mp3'
@@ -26,10 +26,18 @@ const AppProvider = ({ children }) => {
       audioRef.current = null
    }
 
+   useEffect(() => {
+      if (isOpen || player) {
+         document.body.style.overflow = 'hidden';
+      } else {
+         document.body.style.overflow = 'auto';
+      }
+   }, [isOpen, player]);
+
    return (
       <AppContext.Provider
          value={{
-            isOpen, 
+            isOpen,
             setIsOpen,
             player,
             setPlayer,

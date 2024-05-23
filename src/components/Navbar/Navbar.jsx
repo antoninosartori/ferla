@@ -1,16 +1,18 @@
 // src/components/Navbar.jsx
 import { useContext } from 'react';
-import './Nav.css';
+import './Navbar.css';
 import { IconHamburger } from '../../assets/icons/IconHamburger.jsx';
 import { IconX } from '../../assets/icons/IconX.jsx';
 import { AppContext } from '../../contexts/AppContext/AppContext.jsx';
 
-export function Nav() {
+export function Navbar() {
    const {isOpen, setIsOpen} = useContext(AppContext)
 
    const toggleMenu = () => {
       setIsOpen(!isOpen);
    };
+
+   
 
    return (
       <header className='header-main-container'>
