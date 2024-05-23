@@ -16,7 +16,7 @@
    height: 100%;
    width: 100%;
    background-color: rgba(0, 0, 0, 0.164);
-   filter: blur(100%);
+   backdrop-filter: blur(1rem);
 }
 
 .Player--closeBtn{
