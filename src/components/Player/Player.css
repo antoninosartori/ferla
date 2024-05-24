@@ -16,7 +16,7 @@
    height: 100%;
    width: 100%;
    background-color: rgba(0, 0, 0, 0.164);
-   filter: blur(100%);
+   backdrop-filter: blur(1rem);
 }
 
 .Player--closeBtn{
@@ -56,7 +56,7 @@
 .Player-info-wrapper{
    display: flex;
    flex-direction: column;
-   gap: 8px;
+   gap: var(--gap-xsm);
    max-width: 40%;
 }
 
@@ -101,7 +101,7 @@
 .Player-tracks-wrapper{
    display: flex;
    flex-direction: column;
-   gap: 8px;
+   gap: var(--gap-xsm);
    flex-grow: 1;
    overflow-y: auto;
 }
@@ -110,7 +110,7 @@
    .Player-content-container{
       flex-direction: column;
       min-height: 100dvh;
-      gap: 16px;
+      gap: var(--gap-sm);
    }
    .Player--closeBtn{
       bottom: unset;
@@ -119,7 +119,7 @@
 
    .Player-info-wrapper{
       flex-direction: row;
-      gap: 8px;
+      gap: var(--gap-xsm);
       max-width: 100%;
    }
 
@@ -129,7 +129,7 @@
 
    .Player-info-project-container{
       flex-direction: column;
-      gap: 8px;
+      gap: var(--gap-xsm);
       width: 100%;
    }
 }

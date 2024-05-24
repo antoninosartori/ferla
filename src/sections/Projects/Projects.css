@@ -28,7 +28,7 @@
    grid-template-columns: repeat(
       auto-fit, minmax(33%, 1fr)
    );
-   gap: 8px;
+   gap: var(--gap-xsm);
    justify-content: space-between;
 }
 

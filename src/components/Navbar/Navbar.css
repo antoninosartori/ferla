@@ -1,0 +1,123 @@
+/* src/components/Navbar.css */
+.header-main-container {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100dvw;
+   display: grid;
+   place-items: center;
+   z-index: 100;
+}
+
+.header-wrapper-container {
+   max-width: var(--max-width-container);
+   display: flex;
+   width: 100%;
+   background-color: #191414B2;
+}
+
+.container-navbar {
+   width: 100%;
+   padding: var(--gap-sm) var(--gap-md);
+}
+
+.navbar-data {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   width: 100%;
+}
+
+.navbar-logo-container {
+   display: none;
+}
+
+.navbar-navlist {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   gap: var(--gap-md);
+}
+
+.nav-link {
+   color: var(--color-primary);
+   font-size: var(--fs-medium);
+   font-weight: 300;
+   transition: all 0.3s;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+   opacity: .7;
+   transition: all 0.3s;
+   
+}
+
+.btn-toggle {
+   display: none;
+   background: none;
+   border: none;
+   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+
+   header {
+      /* background-color: chocolate; */
+      backdrop-filter: blur(1em);
+      transition: all 0.4s;
+
+   }
+
+   .container-navbar {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+   }
+
+   .btn-toggle {
+      display: block;
+   }
+
+   .navbar-data {
+      display: none;
+      justify-content: unset;
+      gap: 32px;
+   }
+
+   .navbar-logo-container{
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: auto;
+   }
+
+   .navbar-logo-image{
+      max-width: 320px;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+   }
+
+   .navbar-navlist {
+      flex-direction: column;
+      padding: 16px;
+      border-radius: 4px;
+      align-items: flex-start;
+      justify-content: space-between;
+   }
+
+   .navbar-data.show {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .navbar-data.expand {
+      min-height: 100vh;
+   }
+
+   .nav-link{
+      font-size: var(--fs-headline);
+   }
+}
