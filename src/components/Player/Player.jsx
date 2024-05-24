@@ -47,11 +47,16 @@ export default function Player() {
                   <img className='Player-project--image' src={player.image} alt="imagen" />
                </figure>
                <div className='Player-info-project-container'>
+                  {player?.category &&
+                     <div className='Player-category-container'>
+                        <span >{player.category}</span>
+                     </div>
+                  }
                   <h2 className='Player-info-project--title'>{player.title}</h2>
                   <p className='Player-info-project--description'>{player.description}</p>
                </div>
             </div>
-         {console.log(player?.tracks?.length)}
+            {console.log(player?.tracks?.length)}
             {(player?.tracks?.length > 0 && player?.tracks?.length !== undefined) &&
                <div className='Player-tracks-container'>
                   <div className='Player-tracks-wrapper'>

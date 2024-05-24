@@ -76,8 +76,19 @@
 .Player-info-project-container{
    display: flex;
    flex-direction: column;
-   gap: 26px;
+   gap: var(--gap-sm);
    overflow-y: auto;
+}
+
+.Player-category-container{
+   width: 100%;
+   max-width: max-content;
+   background-color: var(--color-tertiary);
+   color: var(--color-background);
+   padding: var(--gap-xsm);
+   border-radius: var(--border-radius-sm);
+   font-size: var(--fs-small);
+   font-weight: 700;
 }
 
 .Player-info-project--title{

@@ -27,7 +27,7 @@ export const PROJECTS_DATA = [
 	{
 		id: crypto.randomUUID(),
 		title: "Campaña Sarkany",
-		category: "Produccion Musical",
+		category: "Producción Musical",
 		image: sarkanyImage,
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 		tracks: [{
@@ -39,7 +39,7 @@ export const PROJECTS_DATA = [
 	{	
 		id: crypto.randomUUID(),
 		title: "Hotel estudio",
-		category: "Produccion Musical",
+		category: "Producción Musical",
 		image: hotelImage,
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 		tracks: [{
@@ -51,7 +51,7 @@ export const PROJECTS_DATA = [
 	{
 		id: crypto.randomUUID(),
 		title: "REVOLVER",
-		category: "Produccion Musical",
+		category: "Producción Musical",
 		image: revolverImage,
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 		tracks: [{
@@ -63,7 +63,7 @@ export const PROJECTS_DATA = [
 	{
 		id: crypto.randomUUID(),
 		title: "VENUE BRAND EXPERIENCE",
-		category: "Produccion Musical",
+		category: "Producción Musical",
 		image: venueImage,
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 		//tracks: [{
@@ -75,7 +75,7 @@ export const PROJECTS_DATA = [
   {
 		id: crypto.randomUUID(),
 		title: "The Last of Us Serie",
-		category: "Produccion Musical",
+		category: "Producción Musical",
 		image: lastofusImage01,
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
 		tracks: [
@@ -124,7 +124,7 @@ export const PROJECTS_DATA = [
 	{
 		id: crypto.randomUUID(),
 		title: "The Last of Us Serie",
-		category: "Produccion Musical",
+		category: "Producción Musical",
 		image: lastofusImage02,
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
 		tracks: [
