@@ -56,7 +56,6 @@ export default function Player() {
                   <p className='Player-info-project--description'>{player.description}</p>
                </div>
             </div>
-            {console.log(player?.tracks?.length)}
             {(player?.tracks?.length > 0 && player?.tracks?.length !== undefined) &&
                <div className='Player-tracks-container'>
                   <div className='Player-tracks-wrapper'>

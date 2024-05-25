@@ -1,0 +1,14 @@
+.Title--text{
+   font-size: var(--fs-title);
+   font-family: var(--font-primary);
+   text-align: left;
+   font-weight: 300;
+   color: var(--color-primary);
+   padding: var(--gap-md) 0 var(--gap-md) var(--gap-lg);
+}
+
+@media (max-width: 768px) {
+   .Title--text{
+      padding: var(--gap-md) 0 var(--gap-md) var(--gap-md);
+   }
+}
