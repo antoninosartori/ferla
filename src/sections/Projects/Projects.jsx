@@ -9,6 +9,7 @@ import { PROJECT_CATEGORIES } from '../../utils/project-categories-enum'
 export default function Projects() {
    const { setPlayer } = useContext(AppContext)
 
+
    const projectProduction = PROJECTS_DATA?.filter(project => project.category === PROJECT_CATEGORIES.production)
    const projectSoundDesign = PROJECTS_DATA?.filter(project => project.category === PROJECT_CATEGORIES.soundDesign)
    const projectMixMastering = PROJECTS_DATA?.filter(project => project.category === PROJECT_CATEGORIES.mixMastering)

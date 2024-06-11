@@ -1,15 +1,70 @@
 import { useEffect, useRef, useState } from "react";
 import { createContext } from "react";
-import sound1 from '../../assets/sounds/last-of-us/I.mp3'
-import sound2 from '../../assets/sounds/last-of-us/II.mp3'
-import sound3 from '../../assets/sounds/last-of-us/III.mp3'
-import lastImg from '../../assets/images/lastofus01.webp'
+const { VITE_STEINHQ_AUTH_PASSWORD, VITE_STEINHQ_AUTH_USERNAME, VITE_STEINHQ_API_URL } = import.meta.env;
+
 
 const AppContext = createContext()
 
 const AppProvider = ({ children }) => {
 
-   /* NAVBAR */
+   /* DATA */
+   const [allProjects, setAllProjects] = useState(null)
+   const [isLoading, setIsLoading] = useState(false)
+
+   useEffect(() => {
+      const getData = async () => {
+         try {
+            setIsLoading(true);
+            const url = `${VITE_STEINHQ_API_URL}/Sheet1`;
+
+            const username = VITE_STEINHQ_AUTH_USERNAME;
+            const password = VITE_STEINHQ_AUTH_PASSWORD;
+            const credentials = btoa(`${username}:${password}`);
+
+            const headers = new Headers();
+            headers.set('Authorization', `Basic ${credentials}`);
+
+            const response = await fetch(url, { headers });
+            const data = await response.json();
+
+            if (data && data.length > 0) {
+               const processedData = data.map(project => {
+                  if (project.tracks && typeof project.tracks === 'string') {
+                     const parts = project.tracks.split('---');
+
+                     const tracks = parts.map(part => {
+                        const [idPart, namePart, soundPart] = part.split(',').map(s => s.trim());
+
+                        const id = idPart.split(': ')[1];
+                        const name = namePart.split(': ')[1].replace(/"/g, '');
+                        const sound = soundPart.split(': ')[1].replace(/"/g, '');
+
+                        return { id, name, sound };
+                     });
+
+                     return {
+                        ...project,
+                        tracks: tracks
+                     };
+                  } else {
+                     console.error('Invalid tracks data:', project.tracks);
+                     return project;
+                  }
+               });
+
+               setAllProjects(processedData);
+            } else {
+               console.error('No data received or empty array:', data);
+            }
+         } catch (error) {
+            console.error(error);
+         } finally {
+            setIsLoading(false);
+         }
+      };
+      getData();
+   }, []);
+
    const [isOpen, setIsOpen] = useState(false);
 
    /* PLAYER */
@@ -37,6 +92,8 @@ const AppProvider = ({ children }) => {
    return (
       <AppContext.Provider
          value={{
+            isLoading,
+            allProjects,
             isOpen,
             setIsOpen,
             player,
