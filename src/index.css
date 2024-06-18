@@ -3,6 +3,10 @@
    src: url('/public/fonts/Lexend/Lexend-VariableFont_wght.ttf') format('truetype');
 }
 
+html{
+   scroll-behavior: smooth;
+}
+
 :root {
    --font-primary: 'Lexend', sans-serif;
 
