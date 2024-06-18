@@ -1,6 +1,7 @@
 import './Home.css'
 import Hero from '../../sections/Hero/Hero'
 import Projects from '../../sections/Projects/Projects'
+import Footer from '../../sections/Footer/Footer'
 
 export default function Home() {
 
@@ -11,7 +12,7 @@ export default function Home() {
 			< Projects />
 			
          {/* < Bio /> */}
-			{/* < Fotter /> */}
+			< Footer />
 
 		</section>
 	)

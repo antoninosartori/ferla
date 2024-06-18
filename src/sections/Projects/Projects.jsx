@@ -24,6 +24,7 @@ export default function Projects() {
                <div className='ProjectsPage-grid-container'>
                   {projectProduction?.map(project => (
                      < Card
+                        height='big'
                         key={project.id}
                         title={project.title}
                         image={project.image}
