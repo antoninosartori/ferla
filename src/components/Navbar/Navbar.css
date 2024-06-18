@@ -118,6 +118,6 @@
    }
 
    .nav-link{
-      font-size: var(--fs-headline);
+      font-size: var(--fs-headline-lg);
    }
 }
