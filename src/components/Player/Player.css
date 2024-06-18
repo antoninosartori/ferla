@@ -153,6 +153,10 @@
 }
 
 
+.Player-tracks-container .FloatingBanner-main-container{
+   margin-bottom: 20px;
+}
+
 @media (max-width: 768px) {
    .Player-content-container{
       flex-direction: column;

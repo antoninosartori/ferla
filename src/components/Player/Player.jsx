@@ -3,6 +3,7 @@ import { useContext, useEffect } from 'react'
 import { AppContext } from '../../contexts/AppContext/AppContext'
 import PlayerTrack from '../PlayerTrack/PlayerTrack'
 import DisplayButton from '../DisplayButton/DisplayButton'
+import FloatingBanner from '../FloatingBanner/FloatingBanner'
 
 export default function Player() {
    const {
@@ -60,11 +61,16 @@ export default function Player() {
                <div className='Player-tracks-container'>
                   <div className='Player-tracks-wrapper'>
                      {player?.tracks?.map((track, idx) => (
-                        < PlayerTrack key={track.id} sound={track.sound} trackId={track.id} trackName={track.name} trackNumber={idx + 1} />
+                        < PlayerTrack key={track.id} sound={track.sound} trackId={track.id} trackName={track.name} platform={track.platform} redirectUrl={track.redirectUrl} trackNumber={idx + 1} />
                      ))}
                   </div>
 
-                  < DisplayButton />
+                  {player.albumRedirectUrl ?
+                     <FloatingBanner title='Mirá todo el album acá' description={false} redirectUrl={player.albumRedirectUrl} />
+                     : < DisplayButton />
+                  }
+
+
                </div>}
          </article>
 

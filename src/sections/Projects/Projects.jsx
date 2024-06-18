@@ -18,12 +18,13 @@ export default function Projects() {
       <section className='ProjectsPage-main-container'>
 
          {projectProduction?.length > 0 &&
-            <div className='ProjectsPage-wrapper-container'>
+            <div id='produccion' className='ProjectsPage-wrapper-container'>
                < Title text={PROJECT_CATEGORIES.production} />
 
                <div className='ProjectsPage-grid-container'>
                   {projectProduction?.map(project => (
                      < Card
+                        height='big'
                         key={project.id}
                         title={project.title}
                         image={project.image}
@@ -34,7 +35,7 @@ export default function Projects() {
          }
 
          {projectSoundDesign?.length > 0 &&
-            <div className='ProjectsPage-wrapper-container'>
+            <div id='sound-design' className='ProjectsPage-wrapper-container'>
                < Title text={PROJECT_CATEGORIES.soundDesign} />
 
                <div className='ProjectsPage-grid-container'>
@@ -50,7 +51,7 @@ export default function Projects() {
          }
 
          {projectMixMastering?.length > 0 &&
-            <div className='ProjectsPage-wrapper-container'>
+            <div  id='mix-&-mastering' className='ProjectsPage-wrapper-container'>
                < Title text={PROJECT_CATEGORIES.mixMastering} />
 
                <div className='ProjectsPage-grid-container'>

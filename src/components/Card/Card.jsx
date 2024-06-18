@@ -3,7 +3,7 @@ import './Card.css'
 export function Card({ title, image, height = "medium", ...others }) {
 
 	const heightMap = {
-		big: '500px',
+		big: '600px',
 		medium: '422px',
 	};
 
