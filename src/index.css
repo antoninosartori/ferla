@@ -77,8 +77,10 @@ body {
    :root {
       --fs-logo: 80px;
       --fs-title: 50px;
+			--fs-headline-lg: 32px;
       --fs-headline: 24px;
       --fs-medium: 20px;
+			--fs-body-lg: 18px;
       --fs-body: 16px;
       --fs-small: 14px;
       --fs-tiny: 12px;

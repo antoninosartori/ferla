@@ -103,6 +103,26 @@
    font-weight: 300;
 }
 
+.Player-info-project-container {
+  overflow-y: auto;
+	padding-inline: var(--padding-x-component);
+}
+
+.Player-info-project-container::-webkit-scrollbar {
+  width: 8px;
+	margin-left: 10px;
+}
+
+.Player-info-project-container::-webkit-scrollbar-track {
+  background: var(--color-seconary-light);
+	border-radius: 100px;
+}
+
+.Player-info-project-container::-webkit-scrollbar-thumb {
+  background: var(--color-player-slider-track);
+	border-radius: 100px;
+}
+
 .Player-tracks-container{
    flex-grow: 1;
    display: flex;
@@ -115,7 +135,23 @@
    gap: var(--gap-xsm);
    flex-grow: 1;
    overflow-y: auto;
+	 padding-inline: 6px;
 }
+
+.Player-tracks-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.Player-tracks-wrapper::-webkit-scrollbar-track {
+  background: var(--color-seconary-light);
+	border-radius: 100px;
+}
+
+.Player-tracks-wrapper::-webkit-scrollbar-thumb {
+  background: var(--color-player-slider-track);
+	border-radius: 100px;
+}
+
 
 .Player-tracks-container .FloatingBanner-main-container{
    margin-bottom: 20px;
