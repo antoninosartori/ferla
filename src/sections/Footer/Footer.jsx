@@ -12,7 +12,7 @@ export default function Footer() {
                <a className='Footer-icon-link' href="https://open.spotify.com/playlist/04dVFs4l4T0dXR8pUzKjud?si=fcce524589c94f7b&nd=1&dlsi=12fa06085ea34817">
                   < IconSpotifyWhite />
                </a>
-               <a className='Footer-icon-link' href="https://open.spotify.com/playlist/04dVFs4l4T0dXR8pUzKjud?si=fcce524589c94f7b&nd=1&dlsi=12fa06085ea34817">
+               <a className='Footer-icon-link' href="https://www.instagram.com/byferla/">
                   < IconInstagramWhite />
                </a>
             </div>

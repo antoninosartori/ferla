@@ -48,12 +48,16 @@ export default function PlayerTrack({ trackId, trackNumber, trackName, sound, re
             </div>
          }
 
-         {(redirectUrl && trackNumber) &&
+         {(redirectUrl) &&
             <a href={redirectUrl} target='_blank' className='PlayerTrack-trackNumber-container'>
-               <span className='PlayerTrack--trackNumber'>{trackNumber}</span>
-               <span className='PlayerTrack--icon'>
+               {trackNumber 
+                  ?  <span className='PlayerTrack--trackNumber'>{trackNumber}</span> 
+                  :   mapPlatformIcon[platform]
+               }
+              
+               {trackNumber && <span className='PlayerTrack--icon'>
                   {mapPlatformIcon[platform]}
-               </span>
+               </span>}
             </a>
          }
          {trackName && <h3 className='PlayerTrack--trackName'>{trackName}</h3>}

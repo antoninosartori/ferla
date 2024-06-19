@@ -57,21 +57,22 @@ export default function Player() {
                   <p className='Player-info-project--description'>{player.description}</p>
                </div>
             </div>
-            {(player?.tracks?.length > 0 && player?.tracks?.length !== undefined) &&
+            {
+               (player?.tracks?.length > 0 && player?.tracks?.length !== undefined) &&
                <div className='Player-tracks-container'>
                   <div className='Player-tracks-wrapper'>
-                     {player?.tracks?.map((track, idx) => (
-                        < PlayerTrack key={track.id} sound={track.sound} trackId={track.id} trackName={track.name} platform={track.platform} redirectUrl={track.redirectUrl} trackNumber={idx + 1} />
-                     ))}
+                     <>
+                        {player?.tracks?.map((track, idx) => (
+                           < PlayerTrack key={track.id} sound={track.sound} trackId={track.id} trackName={track.name} platform={track.platform} redirectUrl={track.redirectUrl} trackNumber={idx + 1} />
+                        ))}
+                        {player?.albumRedirectUrl &&  < PlayerTrack  trackName='Mirá todo el album acá' platform={player?.platform} redirectUrl={player?.albumRedirectUrl} />}
+                     </>
                   </div>
 
-                  {player.albumRedirectUrl ?
-                     <FloatingBanner title='Mirá todo el album acá' description={false} redirectUrl={player.albumRedirectUrl} />
-                     : < DisplayButton />
-                  }
+                  {!player.albumRedirectUrl && < DisplayButton />}
 
-
-               </div>}
+               </div>
+            }
          </article>
 
          <audio ref={audioRef}></audio>
