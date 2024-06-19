@@ -65,7 +65,7 @@ export default function Player() {
                         {player?.tracks?.map((track, idx) => (
                            < PlayerTrack key={track.id} sound={track.sound} trackId={track.id} trackName={track.name} platform={track.platform} redirectUrl={track.redirectUrl} trackNumber={idx + 1} />
                         ))}
-                        {player?.albumRedirectUrl &&  < PlayerTrack  trackName='Mirá todo el album acá' platform={player?.platform} redirectUrl={player?.albumRedirectUrl} />}
+                        {player?.albumRedirectUrl &&  < PlayerTrack  trackName='Escuchá todo el album' platform={player?.platform} redirectUrl={player?.albumRedirectUrl} />}
                      </>
                   </div>
 
