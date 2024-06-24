@@ -47,6 +47,8 @@ html{
    --gap-xsm: 8px;
 
    /* COMPONENTS */
+   --navbar-height: 62px;
+
    --padding-x-component: 8px;
 
    --player-track-number-height: 64px;
