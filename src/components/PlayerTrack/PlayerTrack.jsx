@@ -3,7 +3,8 @@ import './PlayerTrack.css'
 import { AppContext } from '../../contexts/AppContext/AppContext'
 import IconPause from '../../assets/icons/IconPause'
 import IconPlay from '../../assets/icons/IconPlay'
-import IconSpotify from '../../assets/icons/IconSpotify'
+import IconYouTubeWhite from '../../assets/icons/IconYouTubeWhite'
+import IconSpotifyWhite from '../../assets/icons/IconSpotifyWhite'
 
 export default function PlayerTrack({ trackId, trackNumber, trackName, sound, redirectUrl, platform }) {
    const { isPlaying, setIsPlaying, currentSong, setCurrentSong, audioRef, } = useContext(AppContext)
@@ -32,8 +33,8 @@ export default function PlayerTrack({ trackId, trackNumber, trackName, sound, re
    const className = isThisTrackPlaying ? 'PlayerTrack--playing' : ''
 
    const mapPlatformIcon = {
-      youtube: <IconSpotify/>,
-      spotify: < IconSpotify />
+      youtube: <IconYouTubeWhite/>,
+      spotify: < IconSpotifyWhite />
    }
 
    return (

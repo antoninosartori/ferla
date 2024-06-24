@@ -3,7 +3,6 @@ import { useContext, useEffect } from 'react'
 import { AppContext } from '../../contexts/AppContext/AppContext'
 import PlayerTrack from '../PlayerTrack/PlayerTrack'
 import DisplayButton from '../DisplayButton/DisplayButton'
-import FloatingBanner from '../FloatingBanner/FloatingBanner'
 
 export default function Player() {
    const {
