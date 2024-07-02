@@ -1,6 +1,6 @@
 import marMarzoImage from '../assets/images/pulsion.jpg'
 
-import martinOliverImage from '../assets/images/martin_oliver.png'
+import martinOliverImage from '../assets/images/martin_oliver.webp'
 
 import sarkanyImage from '../assets/images/sarkany.webp'
 import sarkanySound from '../assets/sounds/sarkany/sarkany-musica.mp3'
