@@ -1,32 +1,43 @@
+import { useState } from 'react';
 import './Card.css'
+import CardSkeleton from './CardSkeleton';
 
 export function Card({ title, image, height = "medium", ...others }) {
+   const [isLoaded, setIsLoaded] = useState(false);
 
-	const heightMap = {
-		big: '600px',
-		medium: '422px',
-	};
+   const heightMap = {
+      big: '600px',
+      medium: '422px',
+   };
 
-	let computedHeight;
-	if (typeof height === 'number') {
-		computedHeight = `${height}px`;
-	} else {
-		computedHeight = heightMap[height] || height;
-	}
+   let computedHeight;
+   if (typeof height === 'number') {
+      computedHeight = `${height}px`;
+   } else {
+      computedHeight = heightMap[height] || height;
+   }
 
-	const styles = {
-		backgroundImage: `url(${image})`,
-		height: computedHeight,
-	};
-	return (
-		<article
-			style={styles}
-			className="Card-main-container"
-			{...others}
-		>
-			<div className="Card-title-container">
-				<h3>{title}</h3>
-			</div>
-		</article>
-	)
+   const styles = {
+      backgroundImage: isLoaded ? `url(${image})` : 'none',
+      height: computedHeight,
+   };
+   return (
+      <article
+         style={styles}
+         className="Card-main-container"
+         {...others}
+      >
+         {!isLoaded && < CardSkeleton />}
+         <img
+            src={image}
+            onLoad={() => setIsLoaded(true)}
+            style={{ display: 'none' }}
+            alt="card background"
+            loading="lazy"
+         />
+         <div className="Card-title-container">
+            <h3>{title}</h3>
+         </div>
+      </article>
+   );
 }

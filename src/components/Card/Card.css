@@ -1,33 +1,33 @@
 .Card-main-container {
-	background-position: center;
-	background-repeat: no-repeat;
+   position: relative;
+   background-position: center;
+   background-repeat: no-repeat;
    background-size: cover;
-	/* max-width: 655px; */
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: end;
-	align-items: stretch;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: end;
+   align-items: stretch;
    cursor: pointer;
 }
 
-.Card-main-container:hover{
+.Card-main-container:hover {
    opacity: .7;
 }
 
 .Card-title-container {
-	background: linear-gradient(83.18deg, rgba(0, 0, 0, 0.6) 5.34%, rgba(102, 102, 102, 0) 109.75%);
+   background: linear-gradient(83.18deg, rgba(0, 0, 0, 0.6) 5.34%, rgba(102, 102, 102, 0) 109.75%);
 
 }
 
 .Card-title-container h3 {
-	margin: 0;
-	width: 100%;
-	font-family: var(--font-primary);
-	font-weight: 300;
-	font-size: var(--fs-headline);
-	line-height: var(--fs-headline);
-	text-align: left;
-	padding: var(--gap-sm);
-	color: #DADADA
+   margin: 0;
+   width: 100%;
+   font-family: var(--font-primary);
+   font-weight: 300;
+   font-size: var(--fs-headline);
+   line-height: var(--fs-headline);
+   text-align: left;
+   padding: var(--gap-sm);
+   color: #DADADA
 }
