@@ -1,4 +1,4 @@
-import marMarzoImage from '../assets/images/pulsion.jpg'
+import marMarzoImage from '../assets/images/pulsion.webp'
 
 import martinOliverImage from '../assets/images/martin_oliver.webp'
 
