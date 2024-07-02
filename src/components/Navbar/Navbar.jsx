@@ -17,17 +17,20 @@ export function Navbar() {
       <header className='header-main-container'>
          <nav className='header-wrapper-container'>
             <div className="container-navbar">
-               <button className="btn-toggle" onClick={toggleMenu}>
-                  {isOpen ? (
-                     <IconX />
-                  ) : (
-                     <IconHamburger />
-                  )}
-               </button>
-               <div className={`navbar-data ${isOpen ? 'show expand' : ''}`}>
-                  <figure className="navbar-logo-container">
+               <div className='container-navbar--row'>
+                  <a href='#inicio' className="navbar-logo-container">
                      <img className='navbar-logo-image' src={logo} alt="FERLA" />
-                  </figure>
+                  </a>
+                  <button className="btn-toggle" onClick={toggleMenu}>
+                     {isOpen ? (
+                        <IconX />
+                     ) : (
+                        <IconHamburger />
+                     )}
+                  </button>
+               </div>
+               <div className={`navbar-data ${isOpen ? 'show expand' : ''}`}>
+
                   <ul className={`navbar-navlist`} >
                      <li className="nav-item">
                         <a onClick={() => setIsOpen(false)} className="nav-link" href="#produccion"><span>Producción musical</span></a>

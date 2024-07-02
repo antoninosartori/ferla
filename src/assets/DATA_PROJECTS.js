@@ -1,4 +1,7 @@
-// sarkany, hotel, revolver, venue, tlou, tlou2
+import marMarzoImage from '../assets/images/pulsion.jpg'
+
+import martinOliverImage from '../assets/images/martin_oliver.png'
+
 import sarkanyImage from '../assets/images/sarkany.webp'
 import sarkanySound from '../assets/sounds/sarkany/sarkany-musica.mp3'
 
@@ -9,7 +12,6 @@ import revolverImage from '../assets/images/revolver/revolver04.webp'
 import revolverSound from '../assets/sounds/revolver/revolver-sound.mp3'
 
 import venueImage from '../assets/projects/venue_brand.png'
-// venue tiene 2 archivos mp4
 
 import lastofusImage01 from '../assets/images/lastofus01.webp'
 import lastofusImage02 from '../assets/images/lastofus02.webp'
@@ -21,6 +23,7 @@ import lastofusVSound from '../assets/sounds/last-of-us/V.mp3'
 import lastofusVISound from '../assets/sounds/last-of-us/VI.mp3'
 import lastofusVIISound from '../assets/sounds/last-of-us/VII.mp3'
 import lastofusVIIISound from '../assets/sounds/last-of-us/VIII.mp3'
+
 import { PROJECT_CATEGORIES } from '../utils/project-categories-enum'
 
 
@@ -29,7 +32,7 @@ export const PROJECTS_DATA = [
       id: crypto.randomUUID(),
       title: "Mar Marzo Pulsión",
       category: PROJECT_CATEGORIES.production,
-      image: 'https://s3-alpha-sig.figma.com/img/05fb/d3bc/e690eb19602651fbe5d7437b4dafdef2?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cckQJ-70ZbQOkAanO8UD0gwT1vraUxu1AMSQ9hRI9MRVk1HDGtA9e3e4Re3oL5FZpNjF4G20MxC~yfZvqYRRRUAOV1tYPBdSJRolQWQfgUMJMA2zAlBjhJOveL8b6pHNe-dvzTOPAqbzQR78zX44RNznK3~0cBq9gxcCvQnw0AeKMQkZ4xLpYG3-gHmy5pLBHROqfKN~XPII7m~bAGK9fdbdtRUl-KmWSDgz46Mn9p4o~vRq9C5iqpYd3kAi6l0ByEUZWz1n5sWfbP4VOz7LAmX09kqIBctZNpaf7YfpR1~HCB89QrHjVsPzgvHNREeAcMiF2ZyjvyFmcSNlvWVCFQ__',
+      image: marMarzoImage,
       description: 'Pulsión es un álbum de 10 canciones, reconocido con dos nominaciones a los premios Gardel. Esta obra rebosa emocionalidad y ofrece una rica variedad de texturas sonoras. A lo largo del álbum, se exploran géneros que van desde el pop alternativo hasta la música experimental, pasando por el RnB y el jazz.',
       albumRedirectUrl: 'https://open.spotify.com/album/19atAigwiE58wvFBfoqmQ2?si=ej8keIBtQXKSICs8caOuEQ',
       platform: 'spotify',
@@ -64,7 +67,7 @@ export const PROJECTS_DATA = [
       id: crypto.randomUUID(),
       title: "“pm” - Martin Oliver",
       category: PROJECT_CATEGORIES.production,
-      image: 'https://s3-alpha-sig.figma.com/img/7807/92d2/bf2acfe43dc8eee5bda46ac6d552a2e8?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=eSjDkpTuj9fagbpn0Od6LQWHiFTyQIiiWzLty72xtlbBQaTc1W4BDhDo7Jm-Scyp-hR6xiHho7jgUJXauHc5BWaL-VH601WMjQ5CH8Sx18AfkbURU8JkD51rgyZWEqMkYal5dCcFGIByLH8MMuNKfqya2ghETCBCFt1M1sU1D2m7s2wBdDwdavdqFiMjq9Q-wKoICd2k6zcA5~8eKq8SDLIuc-1JsxeQ0erHxFRkI2eQgxUOuU~QiOX6CTgObo1tO6sC6R0AN2LIBSmiOUmy-kR0lwTOwqUh2ZgcW3cW30qf1rgpafVigWcQwDycOyjtKRIXekrPZXcU0OsRDI4Dhw__',
+      image: martinOliverImage,
       description: 'PM emerge como una respuesta a la búsqueda de luz en los momentos de oscuridad. El resultado es un disco que, aunque posee un tono melancólico, irradia calidez. Martín dedica este álbum a la memoria de su padre y su madre, quienes fallecieron hace uno y dos años respectivamente. Este último trabajo presenta una estética completamente renovada en su carrera, caracterizada por una profunda conexión con la música popular argentina de las décadas de los 80 y 90.',
       albumRedirectUrl: 'https://open.spotify.com/album/5L0fWyPoM783LpEQh2R2b0?si=0ijcR5MVSAORr-D1OZF0Ig',
       platform: 'spotify',
