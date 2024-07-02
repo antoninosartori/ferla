@@ -18,9 +18,9 @@ export function Card({ title, image, height = "medium", ...others }) {
    }
 
    const styles = {
-      backgroundImage: isLoaded ? `url(${image})` : 'none',
       height: computedHeight,
    };
+
    return (
       <article
          style={styles}
@@ -31,9 +31,8 @@ export function Card({ title, image, height = "medium", ...others }) {
          <img
             src={image}
             onLoad={() => setIsLoaded(true)}
-            style={{ display: 'none' }}
             alt="card background"
-            loading="lazy"
+            className={`Card--image ${isLoaded ? '' : 'image--none'}`}
          />
          <div className="Card-title-container">
             <h3>{title}</h3>
